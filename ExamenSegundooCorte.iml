@@ -1,11 +1,47 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<module type="JAVA_MODULE" version="4">
-  <component name="NewModuleRootManager" inherit-compiler-output="true">
-    <exclude-output />
-    <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
-    </content>
-    <orderEntry type="inheritedJdk" />
-    <orderEntry type="sourceFolder" forTests="false" />
-  </component>
-</module>
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("===CONTROL DE CALIFICACIONES===");
+        System.out.println("1.Registrar calificaciones");
+        System.out.println("2. Mostrar estadisticas");
+        System.out.println("3. Salir");
+        System.out.println("Seleccione una opcion");
+        Scanner sc = new Scanner(System.in);
+        int opcion = sc.nextInt();
+        while (opcion != 3) {
+            switch (opcion) {
+                case 1:
+                    System.out.println("===REGISTRAR ESTUDIANTE===");
+                    System.out.println("¿Cuantos esudiantes registrara?");
+                    int cantidad = sc.nextInt();
+                    for (cantidad>= 0, cantidad++){
+                        System.out.println("Nombre:");
+                        int nombre = sc.nextInt();
+                        System.out.println("Evaluacion:");
+                        int evalu1 = sc.nextInt();
+                        System.out.println("Evaluacion:");
+                        int evalu2 = sc.nextInt();
+                        System.out.println("Evaluacion:");
+                        int evalu3 = sc.nextInt();
+                        int promedio= (evalu1 + evalu2 +evalu3)/3;
+                        System.out.println("Promedio:"+ promedio);
+                        if (promedio>=6) {
+                            System.out.println("APROBADO");
+                        }
+                           if  (promedio <= 5) {
+                                System.out.println("Reprobado");
+                                break;
+                            }
+                        }
+                        case 2:
+                            System.out.println("===ESTADISTICAS DEL GRUPO=");
+                            System.out.println("Estudiantes registrados:");
+                            break;
+
+
+            }
+
+        }
+    }
+}
