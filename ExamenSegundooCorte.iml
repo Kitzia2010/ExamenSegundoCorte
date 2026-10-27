@@ -1,6 +1,4 @@
-import java.util.Scanner;
-
-public class Main {
+{
     public static void main(String[] args) {
         System.out.println("===CONTROL DE CALIFICACIONES===");
         System.out.println("1.Registrar calificaciones");
@@ -15,33 +13,35 @@ public class Main {
                     System.out.println("===REGISTRAR ESTUDIANTE===");
                     System.out.println("¿Cuantos esudiantes registrara?");
                     int cantidad = sc.nextInt();
-                    for (cantidad>= 0, cantidad++){
+                    for (cantidad = 0; cantidad>=0; cantidad++) {
                         System.out.println("Nombre:");
-                        int nombre = sc.nextInt();
+                        String nombre = sc.next();
                         System.out.println("Evaluacion:");
                         int evalu1 = sc.nextInt();
                         System.out.println("Evaluacion:");
                         int evalu2 = sc.nextInt();
                         System.out.println("Evaluacion:");
                         int evalu3 = sc.nextInt();
-                        int promedio= (evalu1 + evalu2 +evalu3)/3;
-                        System.out.println("Promedio:"+ promedio);
-                        if (promedio>=6) {
+                        int promedio = (evalu1 + evalu2 + evalu3) / 3;
+                        System.out.println("Promedio:" + promedio);
+                        if (promedio >= 6) {
                             System.out.println("APROBADO");
                         }
-                           if  (promedio <= 5) {
-                                System.out.println("Reprobado");
-                                break;
-                            }
-                        }
-                        case 2:
-                            System.out.println("===ESTADISTICAS DEL GRUPO=");
-                            System.out.println("Estudiantes registrados:");
+                        if (promedio <= 5) {
+                            System.out.println("Reprobado");
                             break;
+                        }
+                    }
+                case 2:
+                    System.out.println("===ESTADISTICAS DEL GRUPO=");
+                    System.out.println("Estudiantes registrados:");
+                    int cantidad1 = sc.nextInt();
+                    break;
 
 
             }
 
         }
     }
+
 }
